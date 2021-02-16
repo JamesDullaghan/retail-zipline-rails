@@ -1,24 +1,57 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Programming Exercise - Grouping
 
-Things you may want to cover:
+The goal of this exercise is to identify rows in a CSV file that
+__may__ represent the __same person__ based on a provided __Matching Type__ (definition below).
 
-* Ruby version
+The resulting program should allow us to test at least three matching types:
+ - one that matches records with the same email address
+ - one that matches records with the same phone number
+ - one that matches records with the same email address OR the same phone number
 
-* System dependencies
+## Guidelines
 
-* Configuration
+* **Please DO NOT fork this repository with your solution**
+* Use any language you want, as long as it can be compiled on OSX
+* Only use code that you have license to use
+* Don't hesitate to ask us any questions to clarify the project
 
-* Database creation
+## Resources
 
-* Database initialization
+### CSV Files
 
-* How to run the test suite
+Three sample input files are included. All files should be successfully
+processed by the resulting code.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Matching Type
 
-* Deployment instructions
+A matching type is a declaration of what logic should be used to compare the rows.
 
-* ...
+For example: A matching type named same_email might make use of an algorithm that
+matches rows based on email columns.
+
+## Interface
+
+At a high level, the program should take two parameters. The input file and the matching type.
+
+## Output
+
+The expected output is a copy of the original CSV file with the unique
+identifier of the person each row represents prepended to the row.
+
+## TODO's for Exercise
+
+- [x] CSV import using bulk_insert for performance
+- [x] Sanitization of input values and persisted values with ease of modification
+- [x] Check if there are duplicated records between the files depending on the matching type
+- [x] Add UUID to the CSV for matching records
+- [x] Extract and cleanup classes for testable services
+- [ ] Write tests
+- [ ] Fix issue with persisting and referencing original value before writing to CSV
+
+## Downsides
+
+The biggest downside of this implementation is the values are santized and persisted, and we're not making a copy to reference as the original for writing back out to CSV.
+
+Tests still need to be written, but overall for the time permitted this seems like a decent implementation solving most of the problems encountered!

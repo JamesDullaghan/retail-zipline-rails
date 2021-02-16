@@ -1,9 +1,0 @@
-Uuid,FirstName,LastName,Phone,Email,Zip
-71b45c37-6cb0-4dca-93ff-88cd22410327,John,Smith,5551234567,johns@home.com,94105
-adc0831f-66c2-4693-8f32-ae82c6b01b3c,Jane,Smith,5551234567,janes@home.com,94105-1245
-,Jack,Smith,4441234567,jacks@home.com,94105
-,Josh,Smith,4567890123,joshs@home.com,94109
-,,,15556549873,,
-,Jack,,14441234567,,
-,,Smith,,janes@home.com,
-,Josh,Smith,,,94109

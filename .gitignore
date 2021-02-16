@@ -103,5 +103,4 @@ spec/failures.txt
 *.rdb
 config/master.key
 test/fixtures/files/*.csv
-test/fixtures/files/originals/*.csv
 .DS_Store
